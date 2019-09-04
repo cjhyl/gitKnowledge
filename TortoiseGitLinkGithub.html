@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			p{font-size:16px;}
+			.title{font-size:18px;font-weight:bold;border-left:5px #0000FF solid;text-indent:5px;}
+			.code{color:#ffffff;background:#000000;}
+		</style>
+	</head>
+	<body>
+		<h1>github结合TortoiseGit使用sshkey，无需输入账号和密码</h1>
+		<div>
+本文链接：<a href="https://www.cnblogs.com/chucklu/p/4056499.html">https://www.cnblogs.com/chucklu/p/4056499.html</a>
+		</div>
+		<p class="title">1.github上支持三种方式进行项目的clone    https,ssh,subversion</p>
+		<p>
+https://github.com/用户名/版本库.git<br><br>
+ssh的方式 git@github.com:用户名/版本库t.git&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:red;">此篇文章针对于这种</span><br><br>
+https://github.com/用户名/版本库
+		</p>
+		<img src="images/TortoiseGitLinkGithub/1.jpg" />
+		<p class="title">2.生成密钥</p>
+		<p class="title">2.1 找到TortoiseGit自带的Puttygen工具</p>
+		<img src="images/TortoiseGitLinkGithub/2.jpg" />
+		<p class="title">2.2 打开之后，选择Generate(<span style="color:red;">生成的过程中记得移动鼠标</span>)</p>
+		<img src="images/TortoiseGitLinkGithub/3.jpg" />
+		<p class="title">2.2.1  2017年05月14日更新</p>
+		<p>
+新版本的putty key generator的界面不一致了，并且github添加公钥的地方也有新提示了
+		</p>
+		<p class="title">2.2.1.1下面是github添加公钥的地方，要注意提示</p>
+		<img src="images/TortoiseGitLinkGithub/4.png" />
+		<p class="title">2.2.1.2下面的putty key generator的新界面，只有第三个和第四个是符合要求的</p>
+		<img src="images/TortoiseGitLinkGithub/5.png" />
+		<p class="title">2.3生成完毕之后，将上面的公钥设置到github上面</p>
+		<p>
+github的设置界面，有sshkeys，添加进去就可以了
+		</p>
+		<img src="images/TortoiseGitLinkGithub/6.jpg" />
+		<p class="title">2.4 保存一下私钥到本地</p>
+		<p>
+保存之前，先设置一个私钥的密码【上面的passphrase】，目的是防止其他人使用你的私钥胡乱提交 
+		</p>
+		<p class="title">2.5将私钥加到远端设置中</p>
+		<p>
+<span style="color:red;">注意1 </span>远端只有在.git版本库中才能查看<br><br>
+<span style="color:red;">注意2 </span>填写的URL是以git@github.com开头的
+	</p>
+		<img src="images/TortoiseGitLinkGithub/7.jpg" />
+	</body>
+</html>
